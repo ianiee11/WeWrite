@@ -1,37 +1,34 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home';
-import About from './components/About';
+import Login from './components/Login';
+import Register from './components/Register';
+import Order from './components/Order';
 import Contact from './components/Contact';
-import Login from './components/LoginForm';
-import Register from './components/RegisterForm';
-import Order from './components/OrderList';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import LoginForm from './components/LoginForm';
+import RegisterForm from './components/RegisterForm';
+import OrderForm from './components/OrderForm';
+import OrderList from './components/OrderList';
 
 const App = () => {
   return (
     <Router>
       <div>
-        <header>
-          <h1>My Writing Service</h1>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/order">Order</Link>
-          </nav>
-        </header>
+        <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/order" element={<Order />} />
+            <Switch>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/order" element={<Order />} />
+              <Route path="/contact" element={<Contact />} />
+            </Switch>
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
