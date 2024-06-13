@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import Order from './components/Order';
+import Login from './components/LoginForm';
+import Register from './components/RegisterForm';
+import Order from './components/OrderForm';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
