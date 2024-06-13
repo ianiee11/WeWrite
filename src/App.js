@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Updated import
+
 import Home from './components/Home';
 import Login from './components/LoginForm';
 import Register from './components/RegisterForm';
@@ -18,13 +19,13 @@ const App = () => {
       <div>
         <Header />
         <main>
-          <Routes>
+          <Routes> {/* Updated to Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/order" element={<Order />} />
             <Route path="/contact" element={<Contact />} />
-          </Routes>
+          </Routes> {/* Updated to Routes */}
         </main>
         <Footer />
       </div>
